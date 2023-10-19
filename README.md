@@ -54,7 +54,7 @@ Write a short description of how would you deploy your solution in a cloud envir
 - No time for the service testing :( Tested it manually sending get and post requests
 
 ## CI/CD, cloud environment
-Proper functionality would be storing the hashmap in a DB chunk that the microservice handles, and store files in a shared cloud storage for consistency
+!!!Modifications to current code: Proper functionality would be storing the hashmap in a DB chunk that the microservice handles, and store files in a shared cloud storage for consistency
 
 
 - Version control system, like git
