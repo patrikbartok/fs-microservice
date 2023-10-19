@@ -42,18 +42,20 @@ Write a short description of how would you deploy your solution in a cloud envir
   - writing and updating hashmap isn't atomic. if the app crashes between these, we remain with an orphan corrupt file. There could be a cleanup function that runs every ocne in a while in the background and deletes files that arent stored in the hashmap.
 
 ### FS-service.ts
-- class that creates api endpoints for the FS class.
-- this is basically a microservice.
+- class that creates api endpoints for the FS class
+- this is basically a microservice
 
 ### Error-handling
-- Only catching file exists error in the FS class, because of the wx flag logic handling, then throwing it again for further handling.
+- Only catching file exists error in the FS class, because of the wx flag logic handling, then throwing it again for further handling
 - Every error is caught and handled in the service
 
 ### Testing
 - Created tests for the FS.ts
-- No time for the service testing :(
+- No time for the service testing :( Tested it manually sending get and post requests
 
 ## CI/CD, cloud environment
+Proper functionality would be storing the hashmap in a DB chunk that the microservice handles, and store files in a shared cloud storage for consistency
+
 
 - Version control system, like git
 - CI setup: use a ci/cd service like Jenkins, GitHub Actions
@@ -76,4 +78,4 @@ Write a short description of how would you deploy your solution in a cloud envir
   - configure a load balancer to distribute traffic
 
 Docker is used to build and push images to a registry, while Kubernetes is used to deploy and manage these images in a scalable and reliable way.
-This setup ensures consistency and scalability.
+This setup ensures consistency and scalability
